@@ -55,7 +55,7 @@ public class CarTest
     }
     
     @Test 
-    public void testAddGass()
+    public void testAddGas()
     {
         Car testCar = new Car(50);
         testCar.addGas(20);
