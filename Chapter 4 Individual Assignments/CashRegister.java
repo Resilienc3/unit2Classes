@@ -5,8 +5,8 @@ public class CashRegister
     public static void main (String[] args)
     {
         // Scanned owed and received
-        int amountOwed= 1000;
-        int amountPaid = 2000;
+        int amountOwed= 100;
+        int amountPaid = 203;
         int changeDue = amountPaid - amountOwed;
         final int QUARTER_V = 25;
         final int DIME_V = 10;
@@ -17,13 +17,13 @@ public class CashRegister
         int pNum = 0;
         int numC = changeDue;
         qNum = numC/QUARTER_V;
-        numC = changeDue - (numC/QUARTER_V);
+        numC = changeDue - (numC/QUARTER_V) * QUARTER_V;
         int mod = numC%QUARTER_V;
         dNum = mod/DIME_V;
-        numC = numC - (numC/DIME_V);
+        numC = numC - (numC/DIME_V)* DIME_V;
         mod = numC%DIME_V;
         nNum = mod/NICKEL_V;
-        numC = numC - (numC/NICKEL_V);
+        numC = numC - (numC/NICKEL_V) * NICKEL_V;
         mod = numC%NICKEL_V;
         pNum = mod; 
         
