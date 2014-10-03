@@ -28,6 +28,14 @@ public class CityscapeComponent extends JComponent
         
         // create instances of classes and invoke the draw method on each
         // ...
+        Building building1 = new Building(255,100);
+        Sky sky = new Sky(0,0,200);
+        int x = getWidth()-60;
+        int y = getHeight() -30;
+        sky.draw(g2, 2560, 1360);
+        building1.draw(g2, 150, 200, 255, 0, 200);
+      
+        
         
         
     }

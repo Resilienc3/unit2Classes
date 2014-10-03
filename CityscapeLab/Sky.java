@@ -9,21 +9,24 @@ import java.awt.Color;
  * @author Jalen Smith
  * @version 10/1/14
  */
-public class Building
+public class Sky
 {
-    /** private variable x = x-coordinate*/
-    private int xCo;
-    /** private variable y = y-cooridinate*/
-    private int yCo;
+    /** private variable for the Red color*/
+    private int comp1;
+    /** private variable for the Green color*/
+    private int comp2;
+    /** private variable for the Blue color*/
+    private int comp3;
 
     /**
      * Default constructor for objects of class Building
      */
-    public Building(int x ,int y)
+    public Sky(int red, int green, int blue)
     {
         // initialise instance variables
-        xCo = x;
-        yCo = y;
+        comp1 = red;
+        comp2 = green;
+        comp3 = blue;
     }
 
     /**
@@ -37,14 +40,14 @@ public class Building
      * @param    y    description of parameter y
      * @return    description of the return value
      */
-    public void draw(Graphics2D g2, int w, int h, int comp1, int comp2, int comp3)
+    public void draw(Graphics2D g2, int w, int h)
     {
         // put your code here
-        Rectangle2D.Double struct = new Rectangle2D.Double(this.xCo, this.yCo, w, h);
+        Rectangle2D.Double sky = new Rectangle2D.Double(0,0,w, h);
         
         Color hue = new Color(comp1, comp2, comp3);
         g2.setColor(hue);
-        g2.fill(struct);
+        g2.fill(sky);
         
     }
 
