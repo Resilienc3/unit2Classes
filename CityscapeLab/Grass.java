@@ -4,12 +4,11 @@ import java.awt.geom.Rectangle2D;
 import java.awt.Color;
 
 /**
- * Constructs a Sky
- * 
+ * Constructs a field of grass
  * @author Jalen Smith
  * @version 10/6/14
  */
-public class Sky
+public class Grass
 {
     /** private variable for the Red color*/
     private int comp1;
@@ -19,30 +18,29 @@ public class Sky
     private int comp3;
 
     /**
-     * Default constructor for objects of class Sky
+     * Default constructor for objects of class Grass
      */
-    public Sky(int red, int green, int blue)
+    public Grass(int red, int green, int blue)
     {
-        // initialise instance variables
         comp1 = red;
         comp2 = green;
         comp3 = blue;
     }
 
     /**
-     * Draw - Configures and creates the sky
-     * @pre       All paramaters must be ints
-     * @param    w      width of the sky
-     * @param    h      height of the sky
+     * Draw - Configures and creates the grass (maintains and cuts itself)
+     * @pre       width and height must be ints
+     * @param     w     width of the grass
+     * @param     h     height of the grass
      */
     public void draw(Graphics2D g2, int w, int h)
     {
-        // put your code here
-        Rectangle2D.Double sky = new Rectangle2D.Double(0,0,w, h);
+        
+        Rectangle2D.Double grass = new Rectangle2D.Double(0,200,w, h);
         
         Color hue = new Color(comp1, comp2, comp3);
         g2.setColor(hue);
-        g2.fill(sky);
+        g2.fill(grass);
         
     }
 
