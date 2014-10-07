@@ -2,6 +2,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
 import java.awt.Color;
+import java.util.Random;
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
@@ -11,12 +12,20 @@ import java.awt.Color;
  */
 public class CityscapeComponent extends JComponent
 {
+    private int numOfBuildings;
+    
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
+     * Default constructor for objects of the Component Class
+     */
+    public CityscapeComponent(int x)
+    {
+        // initialise instance variables
+        numOfBuildings = x;
+        
+    }
+    
+    /**
+     * paintComponent 
      * @post    postconditions for the method
      *            (what the method guarantees upon completion)
      * @param    y    description of parameter y
@@ -25,23 +34,21 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        
-        // create instances of classes and invoke the draw method on each
-        // ...
-        Building building1 = new Building(255,150);
-        Building building2 = new Building(450,150);
+        Random r = new Random();
+        int xPos = 255;
         Sky sky = new Sky(0,100,200);
         Grass grass = new Grass(0,255,0);
         Sun sun = new Sun(0,0);
-        int x = getWidth()-60;
-        int y = getHeight() -30;
         sky.draw(g2, 2560, 1360);
         grass.draw(g2, 2560, 1360);
-        building1.draw(g2, 150, 200, 0, 0, 0);
-        building2.draw(g2,150, 200,255,0,0);
         sun.draw(g2);
         
-        
+          for (int x = 0; x < this.numOfBuildings ; x=x+1)
+        {
+            Building building = new Building(xPos,150);
+            building.draw(g2, 150, 200, r.nextInt(256),r.nextInt(256),r.nextInt(256));
+            xPos += 200;
+        }
         
     }
 
