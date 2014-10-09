@@ -7,8 +7,8 @@ import java.util.Random;
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
  * 
- * @author @gcschmit
- * @version 18 July 2014
+ * @author @gcschmit @Jalen Smith
+ * @version 7 October 2014
  */
 public class CityscapeComponent extends JComponent
 {

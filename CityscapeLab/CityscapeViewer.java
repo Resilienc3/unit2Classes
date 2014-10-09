@@ -3,13 +3,13 @@ import java.util.Scanner;
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
  * 
- * @author @gcschmit
- * @version 18 July 2014
+ * @author @gcschmit @Jalen Smith
+ * @version 7 October 2014
  */
 public class CityscapeViewer
 {
     /**
-     * main method for the program which creates and configures the frame for the program
+     * main method for the program which creates and configures the frame for the program as well as prompt for number of buildings
      *
      */
     public static void main(String[] args)
