@@ -23,7 +23,7 @@ public class Sky
      */
     public Sky(int red, int green, int blue)
     {
-        // initialise instance variables
+        
         comp1 = red;
         comp2 = green;
         comp3 = blue;
@@ -37,7 +37,7 @@ public class Sky
      */
     public void draw(Graphics2D g2, int w, int h)
     {
-        // put your code here
+        
         Rectangle2D.Double sky = new Rectangle2D.Double(0,0,w, h);
         
         Color hue = new Color(comp1, comp2, comp3);

@@ -21,7 +21,7 @@ public class Building
      */
     public Building(int x ,int y)
     {
-        // initialise instance variables
+        
         xCo = x;
         yCo = y;
     }

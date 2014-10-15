@@ -19,7 +19,6 @@ public class CityscapeComponent extends JComponent
      */
     public CityscapeComponent(int x)
     {
-        // initialise instance variables
         numOfBuildings = x;
         
     }

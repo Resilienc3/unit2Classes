@@ -9,7 +9,6 @@ import java.awt.Color;
  */
 public class Sun
 {
-    // instance variables - replace the example below with your own
     private int xLeft;
     private int yTop;
 
